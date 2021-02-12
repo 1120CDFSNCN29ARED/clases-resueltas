@@ -1,0 +1,14 @@
+{
+  "name": "clase-03",
+  "version": "1.0.1",
+  "description": "Clase 03 DH",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pablo Baleztena",
+  "license": "NO LICENSE",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}

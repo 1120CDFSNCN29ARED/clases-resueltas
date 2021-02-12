@@ -1,0 +1,22 @@
+[
+  {
+    "title": "estudiar nodejs",
+    "state": "in-process"
+  },
+  {
+    "title": "estudiar JSON",
+    "state": "to-do"
+  },
+  {
+    "title": "darle de comer a mis gatos",
+    "state": "to-do"
+  },
+  {
+    "title": "un buen titulo",
+    "status": "to-do"
+  },
+  {
+    "title": "un buen titulo - reloaded",
+    "status": "to-do"
+  }
+]
