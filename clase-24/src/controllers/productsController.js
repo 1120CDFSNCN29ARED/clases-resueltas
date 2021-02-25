@@ -42,11 +42,12 @@ const controller = {
       ...req.body,
       discount: Number(req.body.discount),
       price: Number(req.body.price),
+      image: req.file.filename,
     };
 
     products.push(newProduct);
 
-    fs.writeFileSync(productsFilePath, JSON.stringify(products));
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
 
     res.redirect("/");
   },
@@ -72,12 +73,20 @@ const controller = {
     product.name = req.body.name;
     product.category = req.body.category;
     product.description = req.body.description;
+    if (req.file) {
+      if (product.image) {
+        fs.unlinkSync(
+          path.join(__dirname, "../../public/images/products", product.image)
+        );
+      }
+      product.image = req.file.filename;
+    }
     product.price = Number(req.body.price);
     product.discount = Number(req.body.discount);
 
-    fs.writeFileSync(productsFilePath, JSON.stringify(products));
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
 
-    res.redirect(`/products/${prodId}`);
+    res.redirect(`products/${prodId}`);
   },
 
   // Delete - Delete one product from DB
@@ -89,7 +98,7 @@ const controller = {
     });
     products.splice(productIndex, 1);
 
-    fs.writeFileSync(productsFilePath, JSON.stringify(products));
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 4));
     res.redirect(`/`);
   },
 };

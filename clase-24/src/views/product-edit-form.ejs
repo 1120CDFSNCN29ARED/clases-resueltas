@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="col-12">
-            <form action="/products/<%= product.id %>?_method=PUT" method="POST">
+            <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="row product-detail">
                     <div class="col-12 col-md-6">
                         <label for="name" class="form-label">Nombre del producto:</label>
@@ -31,6 +31,12 @@
                         <label for="discount" class="form-label">Descuento:</label>
                         <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="form-input"
                             value="<%= product.discount %>">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="image" class="form-label">Image:
+                            <%= product.image ? product.image : "No hay imagen" %></label>
+                        <input type="file" id="image" name="image" placeholder="Selecciona tu archivo"
+                            class="form-input">
                     </div>
                     <div class="col-12 col-md-6">
                         <label for="category" class="form-label">Categoría:</label>

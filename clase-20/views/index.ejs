@@ -47,7 +47,7 @@
 
                 <% for (const dish of menu) { %>
 
-                <h4><%= dish.title %></h4>
+                <h4 class="<%- dish.discount ? "highlightDish":"" %>"><a href="/dishes/<%= dish.id %>"><%= dish.title %></a></h4>
                 <p class="ps-text-grey">
                     <%= dish.desc %> U$S <%= dish.price %>
                 </p>
