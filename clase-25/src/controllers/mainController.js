@@ -3,6 +3,6 @@ module.exports = {
         res.render("index");
     },
     admin: function (req, res) {
-        res.send("Hola Admin: " + req.query.user);
+        res.render("Hola");
     },
 };
