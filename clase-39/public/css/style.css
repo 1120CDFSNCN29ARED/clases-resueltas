@@ -7,6 +7,9 @@ body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+.container {
+    display: none;
+}
 .contenido {
     padding-top: 160px;
 }
@@ -67,54 +70,50 @@ figure {
 .botonAgregar,
 .botonModificar {
     color: white;
-    background-color: green;
+    background-color: #198754;
     padding: 10px;
     border-radius: 10px;
 }
 .botonBorrar {
     color: white;
-    background-color: red;
+    background-color: #bb2d3b;
     padding: 10px;
     border-radius: 10px;
 }
 .botonVolver {
     color: white;
-    background-color: #00b7ff;
+    background-color: #0b5ed7;
     padding: 10px;
     border-radius: 10px;
 }
-.formulario {
+.formulario,
+.mostrarFormulario {
     margin: auto;
-    width: 20%;
+    width: 40%;
+    border-radius: 10px;
+}
+input,
+select {
+    width: 60%;
+    height: 25px;
+}
+.is-valid {
+    color: #198754;
 }
 
-/* Estilos para el menu */
-#menu {
-    position: fixed;
-    width: 200px;
-    height: 100%;
-    background-color: rgba(37, 37, 37, 0.88);
-    left: -200px;
+.is-invalid {
+    color: #842029;
 }
 
-#menu ul li {
-    color: #fff;
-    list-style: none;
+.alert-warning {
+    color: #842029;
+    background-color: #f8d7da;
     text-align: center;
-    padding: 15px 5px;
-    border-bottom: 1px solid rgb(100, 100, 100, 0.88);
+    border-radius: 10px;
 }
 
-#menu.mostrar {
-    left: 0;
-    margin-top: 40px;
-}
-
-.logoDH {
-    cursor: pointer;
-}
-
-.toggle img {
-    display: block;
-    width: 40px;
+.errors {
+    color: red;
+    font-size: 0.8em;
+    margin-bottom: 16px;
 }
